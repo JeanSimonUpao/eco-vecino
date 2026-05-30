@@ -6,3 +6,5 @@ Este es el proyecto Eco-Vecino del alumno para la gestión de residuos y puntos 
 - Inicialización de la base de datos PostgreSQL.
 - Estructura de tablas para usuarios, residuos y transacciones de puntos.
 - Configuración de FastAPI en el backend.
+
+<!-- test dummy commit check -->
