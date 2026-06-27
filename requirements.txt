@@ -1,0 +1,26 @@
+# EN-001: Dependencias del proyecto Eco-Vecino
+# Instalar con: pip install -r requirements.txt
+
+# Web framework
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+
+# ORM y PostgreSQL
+sqlalchemy==2.0.30
+psycopg2-binary==2.9.9
+alembic==1.13.1
+
+# Variables de entorno
+python-dotenv==1.0.1
+
+# Seguridad y autenticación (SP-001 / HU-001)
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.9
+
+# QR (EN-002 / HU-006)
+qrcode[pil]==7.4.2
+
+# Utilidades
+pydantic[email]==2.7.1
+httpx==0.27.0
