@@ -612,9 +612,14 @@
         // Fetch centers from FastAPI API
         async function fetchCenters() {
             try {
-                const response = await fetch('/api/centros');
+                const response = await fetch('/centros/');
                 if (!response.ok) throw new Error('Error al cargar datos');
-                allCenters = await response.json();
+                const data = await response.json();
+                // Agregar tipos_residuos mockeado ya que la DB aún no lo soporta nativamente
+                allCenters = data.map(c => ({
+                    ...c,
+                    tipos_residuos: c.tipos_residuos || ['Plástico', 'Vidrio', 'Papel']
+                }));
                 renderApp();
             } catch (error) {
                 console.error(error);
