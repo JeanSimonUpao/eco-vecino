@@ -13,18 +13,18 @@ from backend.models import RolUsuario
 
 class UsuarioRegistro(BaseModel):
     """Datos requeridos para registrar un nuevo usuario."""
-    nombre: str = Field(..., min_length=2, max_length=100, example="Juan Pérez")
-    email: EmailStr = Field(..., example="juan@municipio.pe")
-    password: str = Field(..., min_length=6, example="segura123")
-    rol: RolUsuario = Field(default=RolUsuario.vecino, example="vecino")
+    nombre: str = Field(..., min_length=2, max_length=100, examples=["Juan Pérez"])
+    email: EmailStr = Field(..., examples=["juan@municipio.pe"])
+    password: str = Field(..., min_length=6, examples=["segura123"])
+    rol: RolUsuario = Field(default=RolUsuario.vecino, examples=["vecino"])
 
 
 # ── Login ─────────────────────────────────────────────────────────────────────
 
 class UsuarioLogin(BaseModel):
     """Credenciales para iniciar sesión."""
-    email: EmailStr = Field(..., example="juan@municipio.pe")
-    password: str = Field(..., example="segura123")
+    email: EmailStr = Field(..., examples=["juan@municipio.pe"])
+    password: str = Field(..., examples=["segura123"])
 
 
 # ── Respuestas ────────────────────────────────────────────────────────────────
